@@ -1,0 +1,86 @@
+This README file contains information on the contents of the meta-mitwell-bsp layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+This layer depends on:
+
+  URI: git://git.yoctoproject.org/poky
+  branch: master
+  revision: HEAD  
+
+  URI: git://git.openembedded.org/meta-openembedded
+  layers: meta-oe, meta-multimedia, meta-networking, meta-python
+  branch: master
+  revision: HEAD
+
+  URI: git://git.openembedded.org/meta-openembedded/meta-oe
+  branch: master
+  revision: HEAD
+  prio: default
+
+  URI: git://git.openembedded.org/meta-openembedded/meta-perl
+  branch: master
+  revision: HEAD
+  prio: default
+
+  URI: git://git.openembedded.org/meta-openembedded/meta-networking
+  branch: master
+  revision: HEAD
+  prio: default
+
+  URI: git://git.openembedded.org/meta-openembedded/meta-networking
+  revision: v1.0
+
+
+
+Quick Start
+============
+
+1. source poky/oe-init-build-env build
+2. Add this layer to bblayers.conf and the dependencies above
+3. Set MACHINE in local.conf to one of the supported boards
+4. bitbake core-image-sato-sdk
+5. dd to a SD card the generated hddimg file 
+6. Boot your Kuber.
+
+
+Table of Contents
+=================
+
+  I. Adding the meta-mitwell-bsp layer to your build
+ II. Misc
+III. License
+
+
+I. Adding the meta-mitwell-bsp layer to your build
+=================================================
+
+Assuming this layer exists at the top-level of your
+yocto build tree, you can add it to the build system by adding the
+location of the meta-mitwell-bsp layer to bblayers.conf, along with any
+other layers needed. e.g.:
+
+  BBLAYERS ?= " \
+    /path/to/meta \
+    /path/to/meta-poky \
+    /path/to/meta-yocto-bsp \
+    /path/to/meta-mitwell-bsp \
+
+or you can run 'bitbake-layers add-layer meta-mitwell-bsp' command.
+
+
+II. Misc
+========
+
+--- replace with specific information about the meta-mitwell-bsp layer ---
+
+
+II. License
+===========
+
+Copyright "Mitwell".
+
+Email : francis.lee@mitwell.com.tw 
